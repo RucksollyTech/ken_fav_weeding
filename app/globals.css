@@ -3,6 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --nav-color: #F8F5EF;
+  --header-color: #193630;
+  --golden-color: #e5c690;
+  --golden-light-color: #fff8ef;
+  --green-color: #183630;
+  --body-color: #FFF8EF;
+  --text-color: #193630;
 }
 
 @theme inline {
@@ -10,6 +17,13 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-nav: var(--nav-color);
+  --color-header: var(--header-color);
+  --color-golden: var(--golden-color);
+  --color-golden-light: var(--golden-light-color);
+  --color-green: var(--green-color);
+  --color-body: var(--body-color);
+  --color-text: var(--text-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +37,15 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-section {
+  background-image:url('/images/Hero.jpeg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
 }
