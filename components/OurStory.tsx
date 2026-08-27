@@ -4,13 +4,13 @@ import CustomSection from './CustomSection'
 
 const OurStory = () => {
     return (
-        <div className='pt-15'>
+        <div id='ourStory' className='sm:pt-15 pt-7'>
             <div className='flex flex-col items-center justify-center gap-2'>
                 <CustomHeader text='Our Story' />   
             </div>
             <CustomSection>
-                <div className="grid grid-cols-2 gap-10 pt-10">
-                    <div className='bg-[#FCF0E1] rounded-3xl p-5 text-text relative'>
+                <div className="grid lg:grid-cols-2 lg:gap-10 gap-15 pt-10">
+                    <div className='bg-[#FCF0E1] rounded-3xl px-3 sm:px-5 py-5 text-text relative'>
                         <img className='absolute -top-7 mx-auto left-0 right-0' src="/icons/element_flower_and_rings.svg" alt="flower and rings" />
                         <p className="pt-7 text-center">
                             <i>
@@ -59,7 +59,7 @@ const OurStory = () => {
                             </i>
                         </p>
                     </div>
-                    <div className='bg-[#FCF0E1] rounded-3xl p-5 text-text relative'>
+                    <div className='bg-[#FCF0E1] rounded-3xl px-3 sm:px-5 py-5 text-text relative'>
                         <img className='absolute -top-7 mx-auto left-0 right-0' src="/icons/element_flower_and_rings.svg" alt="flower and rings" />
                         <p className="pt-7 text-center">
                             <i>

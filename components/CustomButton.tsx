@@ -1,13 +1,15 @@
 import React from 'react'
 interface CustomButtonProps {
     text: string;
-    onClick: () => void;
+    disable?:boolean;
+    onClick?: () => void;
+    type?: 'submit' | "reset" | "button" | undefined;
     className?: string;
     hasBorder?: boolean;
 }
-const CustomButton = ({ text, onClick, className, hasBorder }: CustomButtonProps) => {
+const CustomButton = ({ text, disable, onClick,type, className, hasBorder }: CustomButtonProps) => {
     return (
-        <button className={`py-2 px-6 rounded-lg text-lg min-w-31 text-center ${className} ${hasBorder ? 'border-2 border-golden' : ''}`} onClick={onClick}>
+        <button type={type} disabled={disable} className={`py-2 cursor-pointer px-6 rounded-lg text-lg min-w-31 text-center ${className} ${hasBorder ? 'border-2 border-golden' : ''}`} onClick={onClick}>
             {text}
         </button>
     )

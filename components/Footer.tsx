@@ -17,12 +17,12 @@ const cormorant_Garamond = Cormorant_Garamond({
 });
 const Footer = () => {
     return (
-        <div className='text-text'>
-            <div className='py-13'>
-                <div className={`${cormorant_Garamond.className} font-medium text-center text-4xl`}>
+        <div id='footer' className='text-text'>
+            <div className='sm:py-13 py-7  px-5'>
+                <div className={`${cormorant_Garamond.className} font-medium text-center text-3xl sm:text-4xl`}>
                     We can’t wait to celebrate with you!
                 </div>
-                <div className='text-lg italic text-center pt-5'>
+                <div className='sm:text-lg text-sm italic text-center pt-5'>
                     Thank you for being part of our journey.
                     <br />
                     Your love and support mean the world to us.
@@ -46,10 +46,10 @@ const Footer = () => {
                         ☎
                     </div>
                     <div className='text-golden-light pt-1 font-medium text-center text-center`'>
-                        +4368181378027/+4746960450
+                        <a href="tel:+4368181378027">+4368181378027</a>/<a href="tel:+4746960450">+4746960450</a>
                     </div>
-                    <img className='absolute left-0 top-0 bottom-0 my-auto' src="/icons/element_flower_and_rings.svg" alt="flower" />
-                    <img className='absolute right-0 top-0 bottom-0 my-auto' src="/icons/element_flower_and_rings.svg" alt="flower" />
+                    <img className='absolute sm:left-0 -left-13 top-0 bottom-0 my-auto' src="/icons/element_flower_and_rings.svg" alt="flower" />
+                    <img className='absolute sm:right-0 -right-10 top-0 bottom-0 my-auto' src="/icons/element_flower_and_rings.svg" alt="flower" />
                 </div>
             </div>
         </div>

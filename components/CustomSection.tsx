@@ -5,7 +5,7 @@ interface CustomSectionProps {
 }
 const CustomSection = ({ children, className }: CustomSectionProps) => {
     return (
-        <div className={`max-w-290 w-full mx-auto px-5 ${className}`}>
+        <div className={`max-w-290 w-full mx-auto sm:px-5 px-4 ${className}`}>
             {children}
         </div>
     )

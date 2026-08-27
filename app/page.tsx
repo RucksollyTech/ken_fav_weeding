@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Home() {
     return (
-        <div className="bg-body">
+        <div className="bg-body overflow-x-hidden">
             <NavBar />
             <Hero />
             <OurStory />

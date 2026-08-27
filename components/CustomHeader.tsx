@@ -11,7 +11,7 @@ const cinzel = Cinzel({
 const CustomHeader = ({text,className}:{text:string,className?:string}) => {
     return (
         <div className='flex flex-col items-center justify-center gap-2'>
-            <div className={`${cinzel.className} ${className} text-header text-5xl font-bold font-sans`}>
+            <div className={`${cinzel.className} ${className} text-header text-2xl sm:text-5xl font-bold font-sans`}>
                 {text}
             </div>
             <UnderLine />

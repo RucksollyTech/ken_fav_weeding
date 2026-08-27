@@ -3,6 +3,7 @@ import { Cinzel } from "next/font/google";
 import UnderLine from './UnderLine';
 import CustomButton from './CustomButton';
 import CustomSection from "./CustomSection";
+import { scrollToSection } from "@/utils/utilityFunctions";
 
 const cinzel = Cinzel({
   weight: '400',
@@ -11,64 +12,69 @@ const cinzel = Cinzel({
 
 const Hero = () => {
     return (
-        <div className=" relative w-full hero-section">
+        <div id="home" className=" relative w-full hero-section">
             <CustomSection>
                 <div className='relative z-20'>
-                    <div className='py-20 max-w-100'>
-                        <h1 className={`${cinzel.className} text-8xl text-header flex flex-col`} >
-                            <span>
-                                FAVOUR
-                            </span>
-                            <span className='text-center'>
-                                & 
-                            </span>
-                            <span>
-                                KENNETH
-                            </span>
-                        </h1>
-                        <p className='text-header text-lg mt-4 font-medium font-sans'>
-                            TOGETHER WITH OUR FAMILIES, WE JOYFULLY <br/>
-                            INVITE YOU TO CELEBRATE OUR WEDDING
-                        </p>
-                        <div className='py-7'>
-                            <UnderLine />
+                    <div className="flex flex-col ">
+                        <div className="lg:hidden pt-5 sm:pt-10 -mb-17 sm:-mb-25 flex justify-center items-center">
+                            <img className="sm:max-w-100 max-w-80 w-full md:max-w-150" src="/images/c4.png" alt="Couples Image Kennet and Favour" />
                         </div>
-                        <div>
-                            <div className='flex gap-3'>
-                                <div className='max-w-8 flex items-center justify-center w-full'>
-                                    <img className='min-w-8' src="/icons/icon_calendar.svg" alt="" />
-                                </div>
-                                <span className='my-auto text-header font-bold text-lg'>
-                                    SATURDAY, 17TH OCTOBER 2026
+                        <div className='lg:py-20 py-10 lg:max-w-100 w-full mx-auto lg:mx-0'>
+                            <h1 className={`${cinzel.className} text-3xl max-sm:leading-7 sm:text-5xl lg:text-8xl text-header flex flex-col`} >
+                                <span className=" text-center lg:text-justify">
+                                    FAVOUR
                                 </span>
-                            </div>
-                            <div className='flex gap-3 pt-3'>
-                                <div className='max-w-8 flex items-center justify-center w-full'>
-                                    <img src="/icons/icon_location.svg" alt="" />
-                                </div>
-                                <span className='my-auto text-header font-bold text-lg'>
-                                    BERGEN NORWAY
+                                <span className='text-center text-golden'>
+                                    & 
                                 </span>
+                                <span className=" text-center lg:text-justify">
+                                    KENNETH
+                                </span>
+                            </h1>
+                            <p className='text-header text-xs sm:text-lg mt-2 sm:mt-4 font-medium font-sans text-center lg:text-justify'>
+                                TOGETHER WITH OUR FAMILIES, WE JOYFULLY <br/>
+                                INVITE YOU TO CELEBRATE OUR WEDDING
+                            </p>
+                            <div className='sm:py-7 py-1 flex items-center justify-center lg:items-start lg:justify-normal'>
+                                <UnderLine />
                             </div>
-                            <div className='flex gap-5'>
-                                <CustomButton 
-                                    text="VIEW DETAILS" 
-                                    onClick={() => {}} 
-                                    className="bg-green text-golden mt-6" 
-                                    hasBorder={false} 
-                                />
-                                <CustomButton 
-                                    text="RSVP" 
-                                    onClick={() => {}} 
-                                    className="text-golden mt-6" 
-                                    hasBorder={true} 
-                                />
+                            <div>
+                                <div className='flex gap-3 items-center justify-center lg:items-start lg:justify-normal'>
+                                    <div className='sm:max-w-8 max-w-4 flex items-center justify-center w-full'>
+                                        <img className='sm:max-w-8 max-w-4' src="/icons/icon_calendar.svg" alt="" />
+                                    </div>
+                                    <span className='my-auto text-header font-bold text-sm sm:text-lg'>
+                                        SATURDAY, 17TH OCTOBER 2026
+                                    </span>
+                                </div>
+                                <div className='flex gap-3 sm:pt-3 pt-1.5 items-center justify-center lg:items-start lg:justify-normal'>
+                                    <div className='sm:max-w-8 max-w-4 flex items-center justify-center w-full'>
+                                        <img src="/icons/icon_location.svg" alt="" />
+                                    </div>
+                                    <span className='my-auto text-header font-bold text-sm sm:text-lg'>
+                                        BERGEN NORWAY
+                                    </span>
+                                </div>
+                                <div className='flex gap-3 lg:gap-5 pt-3 lg:pt-0 flex-col lg:flex-row items-center justify-center lg:items-start lg:justify-normal'>
+                                    <CustomButton 
+                                        text="VIEW DETAILS" 
+                                        onClick={() => scrollToSection('weddingDetail')} 
+                                        className="bg-green text-golden lg:mt-6 max-sm:py-1.5 max-lg:min-w-60 max-lg:text-sm" 
+                                        hasBorder={false} 
+                                    />
+                                    <CustomButton 
+                                        text="RSVP" 
+                                        onClick={() =>  scrollToSection('RSVP')} 
+                                        className="text-golden lg:mt-6 max-sm:py-1.5 max-lg:min-w-60 max-lg:text-sm" 
+                                        hasBorder={true} 
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
                     <img 
                         src="/images/couple_green.png" 
-                        className='absolute bottom-0 right-0 max-w-150' 
+                        className='absolute bottom-0 right-0 max-w-150 lg:block hidden ' 
                         alt="" 
                     />
                 </div>

@@ -5,9 +5,9 @@ import CustomCarosel from './CustomCarosel'
 
 const Gallery = () => {
     return (
-        <div>
+        <div id='gallery'>
             <CustomSection>
-                <div className='py-17'>
+                <div className='sm:py-17 py-7'>
                     <div>
                         <CustomHeader text='GALLERY' />
                     </div>

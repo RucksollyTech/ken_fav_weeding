@@ -1,4 +1,5 @@
 'use client'
+import React from 'react'
 import CustomSection from './CustomSection'
 import CustomHeader from './CustomHeader'
 import { Cinzel } from 'next/font/google';
@@ -6,24 +7,78 @@ import { Cinzel } from 'next/font/google';
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import CustomButton from './CustomButton';
+import { toast } from 'sonner';
 
 const cinzel = Cinzel({
   weight: "400",
   subsets: ["latin"],
 });
 const RSVP = () => {
-    const [attendance, setAttendance] = useState("");
     const [showDetails, setShowDetails] = useState(false);
+
+    const [formData,setFormData] = useState({
+    name: '',
+    email: '',
+    attendance: '',
+    note: ''
+  })
+  const [loading,setLoading]=useState(false)
+  const submitFunc = async(e:React.FormEvent<HTMLFormElement>)=>{
+    e.preventDefault()
+    if (!formData.attendance){
+      toast.error("Attendance field cannot be empty", {
+        description: `Please make sure to select an option from the attendance field.`,
+        position: "top-center",
+        className: '!bg-black !text-red-500 !rounded-lg !shadow-lg',
+        duration: 10000, 
+        action: {
+          label: "Dismiss",
+          onClick: () => {},
+        },
+      })
+      return
+    }
+    setLoading(true)
+    await fetch("/api/rsvp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name:formData.name,
+        email:formData.email,
+        attendance:formData.attendance,
+        note:formData.note,
+      }),
+    });
+    toast.success("Your response was received 😊", {
+      description: `Thank you ${formData.name}`,
+      position: "top-center",
+      className: '!bg-black !text-white !rounded-lg !shadow-lg',
+      duration: 10000, 
+      action: {
+        label: "Dismiss",
+        onClick: () => setFormData({
+          name: '',
+          email: '',
+          attendance: '',
+          note: ''
+        }),
+      },
+    })
+      
+    setLoading(false)
+  }
   return (
-    <div className='mt-15 bg-green py-20 '>
+    <div id='RSVP' className='sm:mt-15 mt-7 bg-green sm:py-20 py-7 '>
         <CustomSection>
-            <div className='pb-10  '>
+            <div className='sm:pb-10 pb-7 '>
                 <CustomHeader className='text-white' text='RSVP' />
             </div>
-            <div className="grid grid-cols-2 gap-10 pt-7">
-                <div className='bg-[#394B3E] rounded-3xl pt-5 pb-12 px-18 text-text relative'>
+            <div className="grid md:grid-cols-2 lg:gap-10 gap-5 pt-7">
+                <div className='bg-[#394B3E] rounded-3xl pt-5 pb-5 max-sm:px-5 px-7 lg:pb-12 lg:px-18 text-text relative'>
                     <img className='absolute -top-7 mx-auto left-0 right-0' src="/icons/element_flower_and_rings.svg" alt="flower and rings" />
-                    <div className={`${cinzel.className} text-xl pt-7 text-center text-white`}>
+                    <div className={`${cinzel.className} text-lg sm:text-xl pt-7 text-center text-white`}>
                         We can’t wait to celebrate with you!
                     </div>
                     <p className="mt-2 text-center font-light italic text-white/70">
@@ -35,7 +90,7 @@ const RSVP = () => {
 
                     
 
-                    <form className="mt-7 space-y-7">
+                    <form onSubmit={submitFunc} className="mt-7 space-y-7">
 
                         <div>
                             <label className="mb-2 block text-sm text-white/60">
@@ -44,15 +99,18 @@ const RSVP = () => {
 
                             <input
                                 type="text"
+                                required
                                 placeholder="Your Full Name"
+                                value={formData.name}
+                                onChange={(e)=>setFormData({...formData,name:e.target.value})}
                                 className="
                                     w-full
                                     rounded-xl
                                     border-2
                                     border-[#e8c47e]
                                     bg-transparent
-                                    px-5
-                                    py-3.5
+                                    sm:px-5 px-2 py-2.5
+                                    sm:py-3.5
                                     text-sm
                                     text-white
                                     outline-none
@@ -63,7 +121,35 @@ const RSVP = () => {
                                 "
                             />
                         </div>
+                        <div>
+                            <label className="mb-2 block text-sm text-white/60">
+                                Email
+                            </label>
 
+                            <input
+                                type="email"
+                                placeholder="Your Email"
+                                required
+                                value={formData.email}
+                                onChange={(e)=>setFormData({...formData,email:e.target.value})}
+                                className="
+                                    w-full
+                                    rounded-xl
+                                    border-2
+                                    border-[#e8c47e]
+                                    bg-transparent
+                                    sm:px-5 px-2 py-2.5
+                                    sm:py-3.5
+                                    text-sm
+                                    text-white
+                                    outline-none
+                                    placeholder:italic
+                                    placeholder:text-white/40
+                                    focus:ring-1
+                                    focus:ring-[#e8c47e]
+                                "
+                            />
+                        </div>
                         <div>
                             <label className="mb-2 block text-sm text-white/60">
                                 Attendance
@@ -73,7 +159,7 @@ const RSVP = () => {
 
                                 <button
                                     type="button"
-                                    onClick={() => setAttendance("accept")}
+                                    onClick={() =>setFormData({...formData,attendance:'accept'})}
                                     className={`
                                         flex items-center gap-4
                                         rounded-xl
@@ -84,7 +170,7 @@ const RSVP = () => {
                                         text-left
                                         transition
                                         ${
-                                            attendance === "accept"
+                                            formData.attendance === "accept"
                                                 ? "bg-[#e8c47e] text-[#123f37]"
                                                 : "text-white/70"
                                         }
@@ -95,7 +181,7 @@ const RSVP = () => {
                                             h-4 w-4 rounded-full border
                                             border-[#e8c47e]
                                             ${
-                                                attendance === "accept"
+                                                formData.attendance === "accept"
                                                     ? "bg-[#123f37]"
                                                     : ""
                                             }
@@ -109,7 +195,7 @@ const RSVP = () => {
 
                                 <button
                                     type="button"
-                                    onClick={() => setAttendance("decline")}
+                                    onClick={() => setFormData({...formData,attendance:'decline'})}
                                     className={`
                                         flex items-center gap-4
                                         rounded-xl
@@ -120,7 +206,7 @@ const RSVP = () => {
                                         text-left
                                         transition
                                         ${
-                                            attendance === "decline"
+                                            formData.attendance === "decline"
                                                 ? "bg-[#e8c47e] text-[#123f37]"
                                                 : "text-white/70"
                                         }
@@ -131,7 +217,7 @@ const RSVP = () => {
                                             h-4 w-4 rounded-full border
                                             border-[#e8c47e]
                                             ${
-                                                attendance === "decline"
+                                                formData.attendance === "decline"
                                                     ? "bg-[#123f37]"
                                                     : ""
                                             }
@@ -153,6 +239,8 @@ const RSVP = () => {
                             <textarea
                                 rows={1}
                                 placeholder="Add any notes here"
+                                value={formData.note}
+                                onChange={(e)=>setFormData({...formData,note:e.target.value})}
                                 className="
                                     w-full
                                     resize-none
@@ -175,18 +263,19 @@ const RSVP = () => {
 
                         <div className="flex justify-center">
                             <CustomButton 
-                                text='CONFIRM RSVP' 
-                                onClick={()=>{}} 
+                                text={loading ? 'Submitting...' : 'CONFIRM RSVP' }
+                                disable={loading}
+                                type='submit'
                                 className='bg-[#e8c47e] text-sm !py-2 font-semibold hover:opacity-90 transition'
                             />
                         </div>
                     </form>
                 </div>
-                <div className='bg-[#394B3E] rounded-3xl flex flex-col pt-5 justify-between pb-12 px-25 text-text relative'>
+                <div className='bg-[#394B3E] rounded-3xl flex flex-col max-sm:px-5 pt-5 justify-between pb-5 px-7 lg:pb-12 lg:px-25 text-text relative'>
 
                     <div>
                         <img className='absolute -top-7 mx-auto left-0 right-0' src="/icons/element_flower_and_rings.svg" alt="flower and rings" />
-                        <div className={`${cinzel.className} text-xl pt-7 text-center text-white`}>
+                        <div className={`${cinzel.className} text-lg sm:text-xl pt-7 text-center text-white`}>
                             Unable to attend?
                         </div>
                         <p className="mt-2 text-center font-light italic text-white/70">
@@ -226,7 +315,7 @@ const RSVP = () => {
                                         Bank Details:
                                     </p>
 
-                                    <div className="mx-auto grid max-w-md font-extralight text-sm grid-cols-[auto_1fr] gap-x-8 gap-y-1 text-left text-white/80">
+                                    <div className="mx-auto grid max-w-md font-extralight text-sm grid-cols-[auto_1fr] gap-x-3 sm:gap-x-8 gap-y-1 text-left text-white/80">
                                         <span>Account Name:</span>
                                         <span>Kenneth Nnanna Egwu</span>
 
