@@ -17,7 +17,7 @@ const Hero = () => {
                 <div className='relative z-20'>
                     <div className="flex flex-col ">
                         <div className="lg:hidden pt-5 sm:pt-10 -mb-17 sm:-mb-25 flex justify-center items-center">
-                            <img className="sm:max-w-100 max-w-80 w-full md:max-w-150" src="/images/c4.png" alt="Couples Image Kennet and Favour" />
+                            <img className="sm:max-w-100 max-w-80 w-full md:max-w-150" src="https://res.cloudinary.com/zq7ppnqm/image/upload/f_auto,q_auto/c4" alt="Couples Image Kennet and Favour" />
                         </div>
                         <div className='lg:py-20 py-10 lg:max-w-100 w-full mx-auto lg:mx-0'>
                             <h1 className={`${cinzel.className} text-3xl max-sm:leading-7 sm:text-5xl lg:text-8xl text-header flex flex-col`} >
@@ -73,7 +73,7 @@ const Hero = () => {
                         </div>
                     </div>
                     <img 
-                        src="/images/couple_green.png" 
+                        src="https://res.cloudinary.com/zq7ppnqm/image/upload/f_auto,q_auto/couple_green" 
                         className='absolute bottom-0 right-0 max-w-150 lg:block hidden ' 
                         alt="" 
                     />

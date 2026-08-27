@@ -100,7 +100,7 @@ html {
   scroll-behavior: smooth;
 }
 .hero-section {
-  background-image:url('/images/Hero.jpeg');
+  background-image:url('https://res.cloudinary.com/zq7ppnqm/image/upload/f_auto,q_auto/Hero');
 
   background-size: cover;
   background-position: center;
