@@ -21,7 +21,7 @@ export async function POST(req: Request) {
       range: "Sheet1!A:C",
       valueInputOption: "USER_ENTERED",
       requestBody: {
-        values: [[body.name,body.name, body.attendance, body.note]],
+        values: [[body.name,body.email, body.attendance, body.note]],
       },
     });
 

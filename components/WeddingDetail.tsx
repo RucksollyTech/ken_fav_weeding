@@ -11,6 +11,9 @@ const cinzel = Cinzel({
 });
 
 const WeddingDetail = () => {
+    const openInNewTab = (address: string) => {
+        window.open(address, "_blank", "noopener,noreferrer");
+    };
     return (
         <div id='weddingDetail' className='sm:mt-15 mt-7 bg-green sm:py-20 py-7 '>
             <CustomSection>
@@ -34,8 +37,8 @@ const WeddingDetail = () => {
                                     Church Ceremony
                                 </div>
                                 <div>
-                                    <i className='text-sm sm:text-lg'>
-                                        St. Paul Kirche, Bergen
+                                    <i className='text-sm sm:text-lg text-golden-light'>
+                                        St. Paul Kirke, Bergen
                                     </i>
                                 </div>
                                 <div className="mt-3">
@@ -57,14 +60,14 @@ const WeddingDetail = () => {
                                     Reception
                                 </div>
                                 <div>
-                                    <i className='text-lg text-sm sm:'>
+                                    <i className='sm:text-lg text-sm text-golden-light'>
                                         Venue to be confirmed
                                     </i>
                                 </div>
                                 <div className="mt-3">
                                     <CustomButton 
                                         text='GET DIRECTIONS' 
-                                        onClick={()=>{}} 
+                                        onClick={()=>openInNewTab('https://maps.app.goo.gl/Gw1QHkWiJD4eSShT6?g_st=ic')} 
                                         hasBorder
                                         className='lg:py-1.5 text-golden max-sm:text-xs max-sm:py-1.5'
                                     />

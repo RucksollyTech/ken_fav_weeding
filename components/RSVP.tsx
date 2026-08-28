@@ -154,12 +154,12 @@ const RSVP = () => {
                                 required
                                 value={formData.email}
                                 onChange={(e)=>setFormData({...formData,email:e.target.value})}
-                                className="
+                                className={`
                                     w-full
                                     rounded-xl
                                     border-2
                                     border-[#e8c47e]
-                                    bg-transparent
+                                    bg-transparent!
                                     sm:px-5 px-2 py-3
                                     sm:py-3.5
                                     text-sm
@@ -169,7 +169,7 @@ const RSVP = () => {
                                     placeholder:text-white/40
                                     focus:ring-1
                                     focus:ring-[#e8c47e]
-                                "
+                                `}
                             />
                         </div>
                         <div>
@@ -349,6 +349,19 @@ const RSVP = () => {
 
                                         <span>BIC/SWIFT:</span>
                                         <span>TRWIBEB1XXX</span>
+                                    </div>
+                                    <div className="mx-auto mt-3 grid max-w-md font-extralight text-sm grid-cols-[auto_1fr] gap-x-3 sm:gap-x-8 gap-y-1 text-left text-white/80">
+                                        <span>Account Name:</span>
+                                        <span>Favour Ofure Oseigbovo</span>
+
+                                        <span>Bank:</span>
+                                        <span>Nok details</span>
+
+                                        {/* <span>IBAN:</span>
+                                        <span>31264954358</span>
+
+                                        <span>BIC/SWIFT:</span>
+                                        <span>TRWIBEB1XXX</span> */}
                                     </div>
                                 </div>
                             )}
