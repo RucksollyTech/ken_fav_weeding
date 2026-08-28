@@ -16,22 +16,24 @@ const Hero = () => {
             <CustomSection>
                 <div className='relative z-20'>
                     <div className="flex flex-col ">
-                        <div className="lg:hidden pt-5 sm:pt-10 -mb-17 sm:-mb-25 flex justify-center items-center">
+                        <div 
+                        data-aos="fade-down" 
+                        className="lg:hidden pt-5 sm:pt-10 -mb-17 sm:-mb-25 flex justify-center items-center">
                             <img className="sm:max-w-100 max-w-80 w-full md:max-w-150" src="https://res.cloudinary.com/zq7ppnqm/image/upload/f_auto,q_auto/c4" alt="Couples Image Kennet and Favour" />
                         </div>
-                        <div className='lg:py-20 py-10 lg:max-w-100 w-full mx-auto lg:mx-0'>
+                        <div data-aos="fade-right"  className='lg:py-20 py-10 lg:max-w-105 w-full mx-auto lg:mx-0'>
                             <h1 className={`${cinzel.className} text-3xl max-sm:leading-7 sm:text-5xl lg:text-8xl text-header flex flex-col`} >
-                                <span className=" text-center lg:text-justify">
+                                <span className=" max-lg:text-center">
                                     FAVOUR
                                 </span>
                                 <span className='text-center text-golden'>
                                     & 
                                 </span>
-                                <span className=" text-center lg:text-justify">
+                                <span className=" max-lg:text-center">
                                     KENNETH
                                 </span>
                             </h1>
-                            <p className='text-header text-xs sm:text-lg mt-2 sm:mt-4 font-medium font-sans text-center lg:text-justify'>
+                            <p className='text-header text-xs sm:text-lg mt-2 sm:mt-4 font-medium max-lg:text-center'>
                                 TOGETHER WITH OUR FAMILIES, WE JOYFULLY <br/>
                                 INVITE YOU TO CELEBRATE OUR WEDDING
                             </p>
@@ -73,6 +75,7 @@ const Hero = () => {
                         </div>
                     </div>
                     <img 
+                        data-aos="fade-left" 
                         src="https://res.cloudinary.com/zq7ppnqm/image/upload/f_auto,q_auto/couple_green" 
                         className='absolute bottom-0 right-0 max-w-150 lg:block hidden ' 
                         alt="" 

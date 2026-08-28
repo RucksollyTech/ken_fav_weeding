@@ -8,10 +8,10 @@ const Gallery = () => {
         <div id='gallery'>
             <CustomSection>
                 <div className='sm:py-17 py-7'>
-                    <div>
+                    <div data-aos="fade-up" >
                         <CustomHeader text='GALLERY' />
                     </div>
-                    <div>
+                    <div data-aos="fade-up" >
                         <CustomCarosel />
                     </div>
                 </div>

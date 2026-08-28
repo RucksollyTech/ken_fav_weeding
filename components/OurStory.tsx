@@ -5,12 +5,12 @@ import CustomSection from './CustomSection'
 const OurStory = () => {
     return (
         <div id='ourStory' className='sm:pt-15 pt-7'>
-            <div className='flex flex-col items-center justify-center gap-2'>
+            <div data-aos="fade-up"  className='flex flex-col items-center justify-center gap-2'>
                 <CustomHeader text='Our Story' />   
             </div>
             <CustomSection>
                 <div className="grid lg:grid-cols-2 lg:gap-10 gap-15 pt-10">
-                    <div className='bg-[#FCF0E1] rounded-3xl px-3 sm:px-5 py-5 text-text relative'>
+                    <div data-aos="fade-right"  className='bg-[#FCF0E1] rounded-3xl px-3 sm:px-5 py-5 text-text relative'>
                         <img className='absolute -top-7 mx-auto left-0 right-0' src="/icons/element_flower_and_rings.svg" alt="flower and rings" />
                         <p className="pt-7 text-center">
                             <i>
@@ -59,7 +59,7 @@ const OurStory = () => {
                             </i>
                         </p>
                     </div>
-                    <div className='bg-[#FCF0E1] rounded-3xl px-3 sm:px-5 py-5 text-text relative'>
+                    <div data-aos="fade-left"  className='bg-[#FCF0E1] rounded-3xl px-3 sm:px-5 py-5 text-text relative'>
                         <img className='absolute -top-7 mx-auto left-0 right-0' src="/icons/element_flower_and_rings.svg" alt="flower and rings" />
                         <p className="pt-7 text-center">
                             <i>

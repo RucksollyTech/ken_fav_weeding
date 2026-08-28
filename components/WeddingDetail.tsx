@@ -14,12 +14,12 @@ const WeddingDetail = () => {
     return (
         <div id='weddingDetail' className='sm:mt-15 mt-7 bg-green sm:py-20 py-7 '>
             <CustomSection>
-                <div className='sm:pb-10 pb-7 '>
+                <div data-aos="fade-up"  className='sm:pb-10 pb-7 '>
                     <CustomHeader className='text-white' text='WEDDING DETAILS' />
                 </div>
                 <div className='grid lg:grid-cols-2'>
                     <div className='flex flex-col gap-10 max-sm:gap-7 relative'>
-                        <div className='flex gap-10 max-sm:gap-5 mx-auto '>
+                        <div data-aos="fade-right"  className='flex gap-10 max-sm:gap-5 mx-auto '>
                             <div>
                                 <img 
                                     className='max-w-35 min-h-35 max-sm:max-w-25 max-sm:min-h-25 rounded-2xl border object-cover' 
@@ -48,7 +48,7 @@ const WeddingDetail = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex gap-10 max-sm:gap-5 mx-auto'>
+                        <div data-aos="fade-right" className='flex gap-10 max-sm:gap-5 mx-auto'>
                             <div>
                                 <img className='max-w-35 min-h-35 max-sm:max-w-25 max-sm:min-h-25 rounded-2xl border object-cover' src="/images/09_dinner_hall_with_tabes_and_glasses.jpg" alt="Dinner Hall" />
                             </div>
@@ -71,17 +71,17 @@ const WeddingDetail = () => {
                                 </div>
                             </div>
                         </div>
-                        <img className='absolute hidden lg:block -right-10.5 top-0 bottom-0 my-auto' src="/icons/element_flower_and_line_combined.svg" alt="demarcate" />
+                        <img data-aos="fade-up"  className='absolute hidden lg:block -right-10.5 top-0 bottom-0 my-auto' src="/icons/element_flower_and_line_combined.svg" alt="demarcate" />
                     </div>
                     <div className='lg:pl-40 mx-auto max-lg:pt-8'>
                         
-                        <div className='flex gap-5 pb-7'>
+                        <div data-aos="fade-up"  className='flex gap-5 pb-7'>
                             <div className='w-10 max-sm:hidden' />
                             <div className={`text-2xl max-sm:text-xl text-golden ${cinzel.className}`}>
                                 PROGRAM OF EVENTS
                             </div>
                         </div>
-                        <div className='flex flex-col sm:gap-5 gap-4'>
+                        <div data-aos="fade-left"  className='flex flex-col sm:gap-5 gap-4'>
                             <div className='flex sm:gap-5 gap-3'>
                                 <div className='sm:max-w-10 max-w-5 w-full my-auto'>
                                     <img src="/icons/icon_rings.svg" alt="wedding rings" />

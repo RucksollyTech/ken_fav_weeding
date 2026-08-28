@@ -72,11 +72,11 @@ const RSVP = () => {
   return (
     <div id='RSVP' className='sm:mt-15 mt-7 bg-green sm:py-20 py-7 '>
         <CustomSection>
-            <div className='sm:pb-10 pb-7 '>
+            <div data-aos="fade-up"  className='sm:pb-10 pb-7 '>
                 <CustomHeader className='text-white' text='RSVP' />
             </div>
             <div className="grid md:grid-cols-2 lg:gap-10 gap-5 pt-7">
-                <div className='bg-[#394B3E] rounded-3xl pt-5 pb-5 max-sm:px-5 px-7 lg:pb-12 lg:px-18 text-text relative'>
+                <div data-aos="fade-right" className='bg-[#394B3E] rounded-3xl pt-5 pb-5 max-sm:px-5 px-7 lg:pb-12 lg:px-18 text-text relative'>
                     <img className='absolute -top-7 mx-auto left-0 right-0' src="/icons/element_flower_and_rings.svg" alt="flower and rings" />
                     <div className={`${cinzel.className} text-lg sm:text-xl pt-7 text-center text-white`}>
                         We can’t wait to celebrate with you!
@@ -271,7 +271,7 @@ const RSVP = () => {
                         </div>
                     </form>
                 </div>
-                <div className='bg-[#394B3E] rounded-3xl flex flex-col max-sm:px-5 pt-5 justify-between pb-5 px-7 lg:pb-12 lg:px-25 text-text relative'>
+                <div data-aos="fade-left" className='bg-[#394B3E] rounded-3xl flex flex-col max-sm:px-5 pt-5 justify-between pb-5 px-7 lg:pb-12 lg:px-25 text-text relative'>
 
                     <div>
                         <img className='absolute -top-7 mx-auto left-0 right-0' src="/icons/element_flower_and_rings.svg" alt="flower and rings" />

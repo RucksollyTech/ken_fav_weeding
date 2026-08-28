@@ -18,7 +18,7 @@ const cormorant_Garamond = Cormorant_Garamond({
 const Footer = () => {
     return (
         <div id='footer' className='text-text'>
-            <div className='sm:py-13 py-7  px-5'>
+            <div data-aos="fade-up" className='sm:py-13 py-7  px-5'>
                 <div className={`${cormorant_Garamond.className} font-medium text-center text-3xl sm:text-4xl`}>
                     We can’t wait to celebrate with you!
                 </div>
