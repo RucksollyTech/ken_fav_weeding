@@ -357,10 +357,10 @@ const RSVP = () => {
                                         <span>Bank:</span>
                                         <span>Nok details</span>
 
-                                        {/* <span>IBAN:</span>
+                                        <span>IBAN:</span>
                                         <span>31264954358</span>
 
-                                        <span>BIC/SWIFT:</span>
+                                        {/* <span>BIC/SWIFT:</span>
                                         <span>TRWIBEB1XXX</span> */}
                                     </div>
                                 </div>
