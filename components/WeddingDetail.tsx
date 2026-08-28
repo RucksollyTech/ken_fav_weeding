@@ -43,7 +43,7 @@ const WeddingDetail = () => {
                                         text='GET DIRECTIONS' 
                                         onClick={()=>{}} 
                                         hasBorder
-                                        className='lg:py-1 text-golden max-sm:text-xs max-sm:py-1'
+                                        className='lg:py-1.5 text-golden max-sm:text-xs max-sm:py-1.5'
                                     />
                                 </div>
                             </div>
@@ -66,7 +66,7 @@ const WeddingDetail = () => {
                                         text='GET DIRECTIONS' 
                                         onClick={()=>{}} 
                                         hasBorder
-                                        className='lg:py-1 text-golden max-sm:text-xs max-sm:py-1'
+                                        className='lg:py-1.5 text-golden max-sm:text-xs max-sm:py-1.5'
                                     />
                                 </div>
                             </div>

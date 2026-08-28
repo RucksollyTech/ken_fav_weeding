@@ -61,13 +61,13 @@ const Hero = () => {
                                     <CustomButton 
                                         text="VIEW DETAILS" 
                                         onClick={() => scrollToSection('weddingDetail')} 
-                                        className="bg-green text-golden lg:mt-6 max-sm:py-1.5 max-lg:min-w-60 max-lg:text-sm" 
+                                        className="bg-green text-golden lg:mt-6 max-lg:min-w-60 max-lg:text-sm" 
                                         hasBorder={false} 
                                     />
                                     <CustomButton 
                                         text="RSVP" 
                                         onClick={() =>  scrollToSection('RSVP')} 
-                                        className="text-golden lg:mt-6 max-sm:py-1.5 max-lg:min-w-60 max-lg:text-sm" 
+                                        className="text-golden lg:mt-6 max-lg:min-w-60 max-lg:text-sm" 
                                         hasBorder={true} 
                                     />
                                 </div>
