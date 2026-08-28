@@ -39,41 +39,57 @@ const RSVP = () => {
       return
     }
     setLoading(true)
-    await fetch("/api/rsvp", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name:formData.name,
-        email:formData.email,
-        attendance:formData.attendance,
-        note:formData.note,
-      }),
-    });
-    setFormData({
-        name: '',
-        email: '',
-        attendance: '',
-        note: ''
-    })
-    toast.success("Your response was received 😊", {
-      description: `Thank you ${formData.name}`,
-      position: "top-center",
-      className: '!bg-black !text-white !rounded-lg !shadow-lg',
-      duration: 10000, 
-      action: {
-        label: "Dismiss",
-        onClick: () => setFormData({
-          name: '',
-          email: '',
-          attendance: '',
-          note: ''
+    try {
+        await fetch("/api/rsvp", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            name:formData.name,
+            email:formData.email,
+            attendance:formData.attendance,
+            note:formData.note,
         }),
-      },
-    })
+        });
+        toast.success("Your response was received 😊", {
+            description: `Thank you ${formData.name}`,
+            position: "top-center",
+            className: '!bg-black !text-white !rounded-lg !shadow-lg',
+            duration: 10000, 
+            action: {
+                label: "Dismiss",
+                onClick: () => setFormData({
+                name: '',
+                email: '',
+                attendance: '',
+                note: ''
+                }),
+            },
+        })
+    } catch (error) {
+        toast.error("Error!", {
+            description: `An error occurred, please try again`,
+            position: "top-center",
+            className: '!bg-black !text-red-500 !rounded-lg !shadow-lg',
+            duration: 10000, 
+            action: {
+            label: "Dismiss",
+            onClick: () => {},
+            },
+        })
+    }finally{
+        setFormData({
+            name: '',
+            email: '',
+            attendance: '',
+            note: ''
+        })
+        setLoading(false)
+    }
+    
+    
       
-    setLoading(false)
   }
   return (
     <div id='RSVP' className='sm:mt-15 mt-7 bg-green sm:py-20 py-7 '>
