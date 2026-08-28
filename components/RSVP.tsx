@@ -51,6 +51,12 @@ const RSVP = () => {
         note:formData.note,
       }),
     });
+    setFormData({
+        name: '',
+        email: '',
+        attendance: '',
+        note: ''
+    })
     toast.success("Your response was received 😊", {
       description: `Thank you ${formData.name}`,
       position: "top-center",
