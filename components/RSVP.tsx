@@ -357,7 +357,7 @@ const RSVP = () => {
                                         <span>Bank:</span>
                                         <span>Sparebank 1 (NOK)</span>
 
-                                        <span>IBAN:</span>
+                                        <span>Account Number:</span>
                                         <span>31264954358</span>
 
                                         {/* <span>BIC/SWIFT:</span>
