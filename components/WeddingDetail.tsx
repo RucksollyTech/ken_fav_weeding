@@ -53,7 +53,7 @@ const WeddingDetail = () => {
                                 <div className="mt-3">
                                     <CustomButton 
                                         text='GET DIRECTIONS' 
-                                        onClick={()=>openMap} 
+                                        onClick={openMap} 
                                         hasBorder
                                         className='lg:py-1.5 text-golden max-sm:text-xs max-sm:py-1.5'
                                     />
