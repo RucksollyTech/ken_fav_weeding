@@ -342,7 +342,7 @@ const RSVP = () => {
                                         <span>Kenneth Nnanna Egwu</span>
 
                                         <span>Bank:</span>
-                                        <span>Wise</span>
+                                        <span>Wise (EUR)</span>
 
                                         <span>IBAN:</span>
                                         <span>BE47767243520280</span>

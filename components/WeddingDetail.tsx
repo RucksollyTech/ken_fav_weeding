@@ -32,15 +32,15 @@ const WeddingDetail = () => {
                 <div className='grid lg:grid-cols-2'>
                     <div className='flex flex-col gap-10 max-sm:gap-7 relative'>
                         <div data-aos="fade-right"  className='flex gap-10 max-sm:gap-5 mx-auto '>
-                            <div>
+                            <div className='max-w-35 w-full max-md:max-w-25'>
                                 <img 
-                                    className='max-w-35 min-h-35 max-sm:max-w-25 max-sm:min-h-25 rounded-2xl border object-cover' 
+                                    className='w-35 max-w-full h-35 max-sm:max-w-25 max-sm:max-h-25 rounded-2xl border object-cover' 
                                     src="/images/08_church_photo.jpg" 
                                     alt="church Image" 
                                 />
                             </div>
                             <div 
-                                className='flex flex-col my-auto max-w-55'
+                                className='flex flex-col my-auto max-w-55 w-full'
                             >
                                 <div className={`text-golden text-base sm:text-2xl ${cinzel.className}`}>
                                     Church Ceremony
@@ -61,10 +61,12 @@ const WeddingDetail = () => {
                             </div>
                         </div>
                         <div data-aos="fade-right" className='flex gap-10 max-sm:gap-5 mx-auto'>
-                            <div>
-                                <img className='max-w-35 min-h-35 max-sm:max-w-25 max-sm:min-h-25 rounded-2xl border object-cover' src="/images/09_dinner_hall_with_tabes_and_glasses.jpg" alt="Dinner Hall" />
+                            <div className='max-w-35 w-full max-md:max-w-25'>
+                                <img 
+                                    className='w-40.5 h-35 max-sm:max-w-25 max-sm:max-h-25 rounded-2xl border object-cover' 
+                                    src="/images/09_dinner_hall_with_tabes_and_glasses.jpg" alt="Dinner Hall" />
                             </div>
-                            <div className='flex flex-col my-auto max-w-55'>
+                            <div className='flex flex-col my-auto max-w-55 w-full'>
                                 <div className={`text-golden text-base sm:text-2xl ${cinzel.className}`}>
                                     Reception
                                 </div>
