@@ -14,6 +14,15 @@ const WeddingDetail = () => {
     const openInNewTab = (address: string) => {
         window.open(address, "_blank", "noopener,noreferrer");
     };
+    const openMap = () => {
+        const address = "Nygårdsgaten 3, 5015 Bergen, Norway";
+
+        window.open(
+            `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`,
+            "_blank",
+            "noopener,noreferrer"
+        );
+    };
     return (
         <div id='weddingDetail' className='sm:mt-15 mt-7 bg-green sm:py-20 py-7 '>
             <CustomSection>
@@ -44,7 +53,7 @@ const WeddingDetail = () => {
                                 <div className="mt-3">
                                     <CustomButton 
                                         text='GET DIRECTIONS' 
-                                        onClick={()=>{}} 
+                                        onClick={()=>openMap} 
                                         hasBorder
                                         className='lg:py-1.5 text-golden max-sm:text-xs max-sm:py-1.5'
                                     />
@@ -67,7 +76,7 @@ const WeddingDetail = () => {
                                 <div className="mt-3">
                                     <CustomButton 
                                         text='GET DIRECTIONS' 
-                                        onClick={()=>openInNewTab('https://maps.app.goo.gl/Gw1QHkWiJD4eSShT6?g_st=ic')} 
+                                        onClick={()=>{}} 
                                         hasBorder
                                         className='lg:py-1.5 text-golden max-sm:text-xs max-sm:py-1.5'
                                     />

@@ -75,7 +75,7 @@ const OurStory = () => {
                                 To find a friend is one thing. To find a brother, lover, supporter,
                                 cheerleader, and best friend in one person is a blessing beyond
                                 words. To find your PERSON—the one created just for you—is
-                                everything. Ands some where along the way we became each
+                                everything. And some where along the way we became each
                                 other’s person.
                             </i>
                         </p>
@@ -112,7 +112,7 @@ const OurStory = () => {
 
                         <p className="pt-3 text-center">
                             <i>
-                                #FovereverKindled #FK26
+                                #ForeverKindled #FK26
                             </i>
                         </p>
                     </div>

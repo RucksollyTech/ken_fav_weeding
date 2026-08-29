@@ -4,6 +4,7 @@ import CustomHeader from './CustomHeader'
 
 import { Cormorant_Garamond, Allura } from 'next/font/google';
 import { Phone } from 'lucide-react';
+import UnderLine from './UnderLine';
 
 
 const allura = Allura({
@@ -35,6 +36,35 @@ const Footer = () => {
                 </div>
                 <div className='text-center text-lg'>
                     #ForeverKindled
+                </div>
+                <div className='justify-center flex pt-5 pb-3'>
+                    <UnderLine />
+                </div>
+                <div className={`${cormorant_Garamond.className} text-center text-xl pb-5`}>
+                    Dress code: Formal
+                    <br />
+                    Colour of the day:
+                </div>
+                <div className='max-w-md mx-auto w-full grid grid-cols-3 gap-3'>
+                    <div className='flex flex-col items-center justify-center gap-2'>
+                        <div className='rounded-full h-5 w-5 bg-green' />
+                        <div className="text-center text-sm">
+                            Dark Emerald
+                            Green
+                        </div>
+                    </div>
+                    <div className='flex flex-col items-center justify-center gap-2'>
+                        <div className='rounded-full h-5 w-5 bg-[#E5C690]' />
+                        <div className="text-center text-sm">
+                            Soft Gold
+                        </div>
+                    </div>
+                    <div className='flex flex-col items-center justify-center gap-2'>
+                        <div className='rounded-full h-5 w-5 bg-[#FFF8EF] border border-black' />
+                        <div className="text-center text-sm">
+                            Champagne Gold
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className='bg-[#193630] py-6'>
