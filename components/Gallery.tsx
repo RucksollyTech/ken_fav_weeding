@@ -5,7 +5,7 @@ import CustomCarosel from './CustomCarosel'
 
 const Gallery = () => {
     return (
-        <div id='gallery'>
+        <section id='gallery'>
             <CustomSection>
                 <div className='sm:py-17 py-7'>
                     <div data-aos="fade-up" >
@@ -16,7 +16,7 @@ const Gallery = () => {
                     </div>
                 </div>
             </CustomSection>
-        </div>
+        </section>
     )
 }
 

@@ -24,7 +24,7 @@ const WeddingDetail = () => {
         );
     };
     return (
-        <div id='weddingDetail' className='sm:mt-15 mt-7 bg-green sm:py-20 py-7 '>
+        <section id='weddingDetail' className='sm:mt-15 mt-7 bg-green sm:py-20 py-7 '>
             <CustomSection>
                 <div data-aos="fade-up"  className='sm:pb-10 pb-7 '>
                     <CustomHeader className='text-white' text='WEDDING DETAILS' />
@@ -155,7 +155,7 @@ const WeddingDetail = () => {
                     </div>
                 </div>
             </CustomSection>
-        </div>
+        </section>
     )
 }
 

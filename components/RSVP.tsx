@@ -94,7 +94,7 @@ const RSVP = () => {
   }
   const {datePast} = timeKeeper()
   return (
-    <div id='RSVP' className='sm:mt-15 mt-7 bg-green sm:py-20 py-7 '>
+    <section id='RSVP' className='sm:mt-15 mt-7 bg-green sm:py-20 py-7 '>
         <CustomSection>
             <div data-aos="fade-up"  className='sm:pb-10 pb-7 '>
                 <CustomHeader className='text-white' text='RSVP' />
@@ -387,7 +387,7 @@ const RSVP = () => {
                 </div>
             </div>
         </CustomSection>
-    </div>
+    </section>
   )
 }
 

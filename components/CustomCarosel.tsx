@@ -50,7 +50,7 @@ const CustomCarosel = () => {
     };
 
     return (
-        <section>
+        <section className=' transition-all duration-300'>
             <div className="mt-14 flex items-center justify-center gap-4 md:gap-8 lg:gap-14">
 
                 {/* Previous Button */}

@@ -49,6 +49,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-nav: var(--nav-color);
   --color-header: var(--header-color);
   --color-golden: var(--golden-color);
   --color-golden-light: var(--golden-light-color);

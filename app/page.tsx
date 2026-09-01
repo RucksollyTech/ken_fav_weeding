@@ -14,14 +14,16 @@ export default function Home() {
         
       }, []);
     return (
-        <div className="bg-body overflow-x-hidden">
+        <div className="bg-body">
             <NavBar />
-            <Hero />
-            <OurStory />
-            <WeddingDetail />
-            <Gallery />
-            <RSVP />
-            <Footer />
+            <div className=" overflow-x-hidden">
+                <Hero />
+                <OurStory />
+                <WeddingDetail />
+                <Gallery />
+                <RSVP />
+                <Footer />
+            </div>
         </div>
     );
 }

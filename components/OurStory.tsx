@@ -4,7 +4,7 @@ import CustomSection from './CustomSection'
 
 const OurStory = () => {
     return (
-        <div id='ourStory' className='sm:pt-15 pt-7'>
+        <section id='ourStory' className='sm:pt-15 pt-7'>
             <div data-aos="fade-up"  className='flex flex-col items-center justify-center gap-2'>
                 <CustomHeader text='Our Story' />   
             </div>
@@ -118,7 +118,7 @@ const OurStory = () => {
                     </div>
                 </div>
             </CustomSection>
-        </div>
+        </section>
     )
 }
 

@@ -13,7 +13,7 @@ const cinzel = Cinzel({
 
 const Hero = () => {
     return (
-        <div id="home" className=" relative w-full hero-section">
+        <section id="home" className=" relative w-full hero-section">
             <CustomSection>
                 <div className='relative z-20'>
                     <div className="flex flex-col ">
@@ -87,7 +87,7 @@ const Hero = () => {
                 </div>
             </CustomSection>
             <div className='bg-[#fff8ef]/85 absolute inset-0 ' />
-        </div>
+        </section>
     )
 }
 
