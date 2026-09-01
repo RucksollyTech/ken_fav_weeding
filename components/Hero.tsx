@@ -23,7 +23,7 @@ const Hero = () => {
                             <img className="sm:max-w-100 max-w-80 w-full md:max-w-150" src="https://res.cloudinary.com/zq7ppnqm/image/upload/f_auto,q_auto/c4" alt="Couples Image Kennet and Favour" />
                         </div>
                         <div data-aos="fade-right"  className='lg:py-20 py-10 lg:max-w-105 w-full mx-auto lg:mx-0'>
-                            <h1 className={`${cinzel.className} text-3xl max-sm:leading-7 sm:text-5xl lg:text-8xl text-header flex flex-col`} >
+                            <h1 className={`${cinzel.className} text-4xl max-sm:leading-7 lg:text-8xl text-header flex flex-col`} >
                                 <span className=" max-lg:text-center">
                                     FAVOUR
                                 </span>

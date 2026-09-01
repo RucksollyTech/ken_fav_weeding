@@ -31,7 +31,7 @@ const WeddingDetail = () => {
                 </div>
                 <div className='grid lg:grid-cols-2'>
                     <div className='flex flex-col gap-10 max-sm:gap-7 relative'>
-                        <div data-aos="fade-right"  className='flex gap-10 max-sm:gap-5 mx-auto '>
+                        <div data-aos="fade-right" className='max-w-100 grid grid-cols-[2fr_3fr] gap-10 max-sm:gap-5 mx-auto '>
                             <div className='max-w-35 w-full max-md:max-w-25'>
                                 <img 
                                     className='w-35 max-w-full h-35 max-sm:max-w-25 max-sm:max-h-25 rounded-2xl border object-cover' 
@@ -60,12 +60,19 @@ const WeddingDetail = () => {
                                 </div>
                             </div>
                         </div>
-                        <div data-aos="fade-right" className='flex gap-10 max-sm:gap-5 mx-auto'>
+                        <div data-aos="fade-right" className='max-w-100 grid grid-cols-[2fr_3fr] gap-10 max-sm:gap-5 mx-auto'>
                             <div className='max-w-35 w-full max-md:max-w-25'>
+                                <img 
+                                    className='w-35 max-w-full h-35 max-sm:max-w-25 max-sm:max-h-25 rounded-2xl border object-cover' 
+                                    src="/images/09_dinner_hall_with_tabes_and_glasses.jpg" 
+                                    alt="Dinner Hall"
+                                />
+                            </div>
+                            {/* <div className='max-w-35 items-start justify-baseline w-full flex max-md:max-w-25'>
                                 <img 
                                     className='w-40.5 h-35 max-sm:max-w-25 max-sm:max-h-25 rounded-2xl border object-cover' 
                                     src="/images/09_dinner_hall_with_tabes_and_glasses.jpg" alt="Dinner Hall" />
-                            </div>
+                            </div> */}
                             <div className='flex flex-col my-auto max-w-55 w-full'>
                                 <div className={`text-golden text-base sm:text-2xl ${cinzel.className}`}>
                                     Reception
