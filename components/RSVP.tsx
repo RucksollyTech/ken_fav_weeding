@@ -8,6 +8,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import CustomButton from './CustomButton';
 import { toast } from 'sonner';
+import { timeKeeper } from '@/utils/dateKeeper';
 
 const cinzel = Cinzel({
   weight: "400",
@@ -91,6 +92,7 @@ const RSVP = () => {
     
       
   }
+  const {datePast} = timeKeeper()
   return (
     <div id='RSVP' className='sm:mt-15 mt-7 bg-green sm:py-20 py-7 '>
         <CustomSection>
@@ -104,7 +106,14 @@ const RSVP = () => {
                         We can’t wait to celebrate with you!
                     </div>
                     <p className="mt-2 text-center font-light italic text-white/70">
-                        Please let us know if you’ll be joining us.
+                        {datePast ? (
+                            <span className='text-red-500'>This form submission ended on:</span> 
+                        ):(
+                            <span>Kindly respond before:</span> 
+                        )} 
+                        <span className='text-lg pl-2 font-semibold text-white'>
+                            September 25, 2026.
+                        </span>
                     </p>
                     <div className='item-center justify-center flex pt-4'>
                         <span className='w-30 py-[1px] bg-golden' />
@@ -123,6 +132,7 @@ const RSVP = () => {
                                 type="text"
                                 required
                                 placeholder="Your Full Name"
+                                disabled={datePast}
                                 value={formData.name}
                                 onChange={(e)=>setFormData({...formData,name:e.target.value})}
                                 className="
@@ -152,6 +162,7 @@ const RSVP = () => {
                                 type="email"
                                 placeholder="Your Email"
                                 required
+                                disabled={datePast}
                                 value={formData.email}
                                 onChange={(e)=>setFormData({...formData,email:e.target.value})}
                                 className={`
@@ -181,6 +192,7 @@ const RSVP = () => {
 
                                 <button
                                     type="button"
+                                    disabled={datePast}
                                     onClick={() =>setFormData({...formData,attendance:'accept'})}
                                     className={`
                                         flex items-center gap-4
@@ -217,6 +229,7 @@ const RSVP = () => {
 
                                 <button
                                     type="button"
+                                    disabled={datePast}
                                     onClick={() => setFormData({...formData,attendance:'decline'})}
                                     className={`
                                         flex items-center gap-4
@@ -260,6 +273,7 @@ const RSVP = () => {
 
                             <textarea
                                 rows={1}
+                                disabled={datePast}
                                 placeholder="Add any notes here"
                                 value={formData.note}
                                 onChange={(e)=>setFormData({...formData,note:e.target.value})}
@@ -286,7 +300,7 @@ const RSVP = () => {
                         <div className="flex justify-center">
                             <CustomButton 
                                 text={loading ? 'Submitting...' : 'CONFIRM RSVP' }
-                                disable={loading}
+                                disable={loading || datePast}
                                 type='submit'
                                 className='bg-[#e8c47e] text-sm !py-2 font-semibold hover:opacity-90 transition'
                             />
@@ -337,7 +351,7 @@ const RSVP = () => {
                                         Bank Details:
                                     </p>
 
-                                    <div className="mx-auto grid max-w-md font-extralight text-sm grid-cols-[auto_1fr] gap-x-3 sm:gap-x-8 gap-y-1 text-left text-white/80">
+                                    <div className="mx-auto grid max-w-70 w-full font-extralight text-sm grid-cols-[auto_1fr] gap-x-3 sm:gap-x-8 gap-y-1 text-left text-white/80">
                                         <span>Account Name:</span>
                                         <span>Kenneth Nnanna Egwu</span>
 
@@ -350,7 +364,7 @@ const RSVP = () => {
                                         <span>BIC/SWIFT:</span>
                                         <span>TRWIBEB1XXX</span>
                                     </div>
-                                    <div className="mx-auto mt-3 grid max-w-md font-extralight text-sm grid-cols-[auto_1fr] gap-x-3 sm:gap-x-8 gap-y-1 text-left text-white/80">
+                                    <div className="mx-auto mt-3 grid w-full max-w-70 font-extralight text-sm grid-cols-[auto_1fr] gap-x-3 sm:gap-x-8 gap-y-1 text-left text-white/80">
                                         <span>Account Name:</span>
                                         <span>Favour Ofure Oseigbovo</span>
 

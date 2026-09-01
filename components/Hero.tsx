@@ -4,6 +4,7 @@ import UnderLine from './UnderLine';
 import CustomButton from './CustomButton';
 import CustomSection from "./CustomSection";
 import { scrollToSection } from "@/utils/utilityFunctions";
+import CountDown from "./dateCounter";
 
 const cinzel = Cinzel({
   weight: '400',
@@ -56,6 +57,9 @@ const Hero = () => {
                                     <span className='my-auto text-header font-bold text-sm sm:text-lg'>
                                         BERGEN NORWAY
                                     </span>
+                                </div>
+                                <div className="md:mt-6 mt-4 md:items-start md:justify-start justify-center items-center flex">
+                                    <CountDown />
                                 </div>
                                 <div className='flex gap-3 lg:gap-5 pt-3 lg:pt-0 flex-col lg:flex-row items-center justify-center lg:items-start lg:justify-normal'>
                                     <CustomButton 
