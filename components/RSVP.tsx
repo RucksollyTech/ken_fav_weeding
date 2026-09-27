@@ -359,7 +359,7 @@ const RSVP = () => {
                                         <span>Wise (EUR)</span>
 
                                         <span>IBAN:</span>
-                                        <span>BE47767243520280</span>
+                                        <span>BE47 9672 4352 0280</span>
 
                                         <span>BIC/SWIFT:</span>
                                         <span>TRWIBEB1XXX</span>
